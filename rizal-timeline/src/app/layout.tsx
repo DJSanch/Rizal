@@ -37,7 +37,7 @@ export default function RootLayout({
         <header className="w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-30">
           <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
             <Link href="/" className="font-semibold">
-              Rizal's Life, Works and Writings
+              Life of a National Hero
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
@@ -47,13 +47,18 @@ export default function RootLayout({
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
+                  <Link href="/blogpost" legacyBehavior passHref>
+                    <NavigationMenuLink className="px-3 py-2">Blogpost</NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
                   <Link href="/references" legacyBehavior passHref>
                     <NavigationMenuLink className="px-3 py-2">References</NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="/blogpost" legacyBehavior passHref>
-                    <NavigationMenuLink className="px-3 py-2">Blogpost</NavigationMenuLink>
+                  <Link href="/about" legacyBehavior passHref>
+                    <NavigationMenuLink className="px-3 py-2">About</NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>

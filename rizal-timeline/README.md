@@ -1,56 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rizal Timeline
+
+An interactive Next.js web application exploring the life, works, and legacy of Dr. José Rizal, the Philippines' national hero.
+
+## Features
+
+- **Home Page**: Welcome page with introduction to the project
+- **Blogpost**: Comprehensive long-form article about Rizal's life, biological factors, environmental influences, and character analysis
+- **References**: Curated list of sources and educational YouTube videos
+- **About Us**: Information about the project creators
+
+## Tech Stack
+
+- **Framework**: Next.js 15.5.4 (App Router)
+- **Styling**: Tailwind CSS v4
+- **UI Components**: Radix UI + shadcn/ui
+- **Language**: TypeScript
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 20+ installed
+- npm or yarn package manager
 
+### Local Development
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## Deploy on Vercel
-
-1) Push this repo to GitHub.
-2) In Vercel, "New Project" → Import the GitHub repo.
-3) Framework preset: Next.js. Build/Output: defaults are fine.
-4) Set environment (none required). Click Deploy.
-
-### Timeline setup
-- Make a copy of the TimelineJS Google Sheet template from timeline.knightlab.com.
-- Paste your events dataset.
-- Publish the sheet to the web and copy the published URL.
-- Edit `src/app/page.tsx` and replace `YOUR_PUBLISHED_SHEET_URL` in the `TimelineEmbed` URL.
-
-### Local dev
-```bash
+git clone <your-repo-url>
 cd rizal-timeline
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the development server:
+```bash
 npm run dev
 ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Deploy to Vercel
+
+### Option 1: Deploy via Vercel Dashboard (Recommended)
+
+1. **Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
+
+2. **Import to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Framework Preset: **Next.js** (auto-detected)
+   - Root Directory: `./` (default)
+   - Build Command: `npm run build` (default)
+   - Output Directory: `.next` (default)
+   - Click **Deploy**
+
+3. **Done!** Your site will be live at `https://your-project.vercel.app`
+
+### Option 2: Deploy via Vercel CLI
+
+1. Install Vercel CLI:
+```bash
+npm i -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
+
+3. Follow the prompts and your site will be deployed
+
+## Project Structure
+
+```
+rizal-timeline/
+├── src/
+│   ├── app/
+│   │   ├── about/          # About page
+│   │   ├── blogpost/       # Blog article page
+│   │   ├── references/     # References page
+│   │   ├── layout.tsx      # Root layout with navigation
+│   │   └── page.tsx        # Home page
+│   ├── components/         # Reusable UI components
+│   └── data/              # Data files
+├── public/
+│   └── images/            # Static images
+├── package.json
+└── vercel.json            # Vercel configuration
+```
+
+## Build & Production
+
+Build for production:
+```bash
+npm run build
+```
+
+Start production server locally:
+```bash
+npm start
+```
+
+## Environment Variables
+
+No environment variables are required for this project.
+
+## Authors
+
+- **Daniel John Henrick D. Sanchez** - BS Computer Science
+- **Lewis Carl Delimo Magdamo** - BS Computer Science
+
+## License
+
+This project is for educational purposes.
 

@@ -7,9 +7,12 @@ import { events as data, TimelineEvent } from '@/data/events';
 function formatDate(e: TimelineEvent) {
   if (!e.month && !e.day) return `${e.year}`;
   const d = new Date(e.year, (e.month || 1) - 1, e.day || 1);
-  return d.toLocaleDateString(undefined, {
-    year: 'numeric', month: 'long', day: e.day ? 'numeric' : undefined,
-  } as any);
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    ...(e.day && { day: 'numeric' }),
+  };
+  return d.toLocaleDateString(undefined, options);
 }
 
 export default function Timeline() {

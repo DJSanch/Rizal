@@ -21,7 +21,7 @@ export default function BlogpostPage() {
           <div className="space-y-4">
             <h1 className="text-4xl font-semibold tracking-tight">José Rizal — Blogpost</h1>
             <p className="text-lg text-muted-foreground">
-              A creative, long-form reading of Rizal's life and ideas.
+              A creative, long-form reading of Rizal&apos;s life and ideas.
             </p>
             <nav className="text-sm text-muted-foreground">
               <ul className="flex flex-wrap gap-3">
@@ -43,7 +43,7 @@ export default function BlogpostPage() {
           <h2 className="text-3xl font-semibold">Introduction</h2>
           <p className="text-base mb-4">
             José Protacio Rizal Mercado y Alonzo Realonda (1861–1896) is widely regarded as the
-            Philippines' national hero. A brilliant polymath—doctor, writer, linguist, scientist, and
+            Philippines&apos; national hero. A brilliant polymath—doctor, writer, linguist, scientist, and
             reformist—Rizal played a central role in awakening Filipino national consciousness during
             the late 19th century. Through his writings, particularly Noli Me Tangere and El Filibusterismo,
             he exposed the abuses of the Spanish friars and colonial officials. His peaceful advocacy for
@@ -52,7 +52,7 @@ export default function BlogpostPage() {
           </p>
           <p className="text-base">
             This timeline explores the biological and environmental factors, key life experiences, and
-            personal virtues and shortcomings that shaped Rizal's evolution from a young intellectual to
+            personal virtues and shortcomings that shaped Rizal&apos;s evolution from a young intellectual to
             a national hero. It also examines how his character was molded by both his upbringing and
             his encounters with colonial injustice.
           </p>
@@ -245,7 +245,7 @@ export default function BlogpostPage() {
                 />
               </div>
               <p className="text-gray-600">
-                Rizal's exceptional qualities that defined his character and leadership.
+                Rizal&apos;s exceptional qualities that defined his character and leadership.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -289,7 +289,7 @@ export default function BlogpostPage() {
                 />
               </div>
               <p className="text-gray-600">
-                The challenges and limitations that shaped Rizal's character and decisions.
+                The challenges and limitations that shaped Rizal&apos;s character and decisions.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
