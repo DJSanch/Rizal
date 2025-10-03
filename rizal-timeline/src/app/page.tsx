@@ -1,34 +1,56 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import TimelineEmbed from "@/components/TimelineEmbed";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-8 row-start-2 w-full max-w-5xl">
-        <Card>
-          <CardHeader>
-            <CardTitle>José Rizal Interactive Timeline</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-muted-foreground">
-              Explore the key moments of Rizal’s life—family background, education, travels, works, and legacy.
+      <main className="row-start-2 w-full max-w-6xl">
+        <FadeIn>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="order-2 md:order-1 space-y-6">
+            <h1 className="text-4xl font-semibold tracking-tight">Welcome to the Rizal Timeline</h1>
+            <p className="text-lg text-muted-foreground">
+              Explore José Rizal’s life, works, and legacy through a clear blog and timeline experience. Use the navigation
+              above to read a detailed Blogpost or browse references. Start below to begin your journey.
             </p>
             <div className="flex gap-3">
-              <Button asChild>
-                <Link href="/references">References</Link>
+              <Button
+                onClick={(e) => {
+                  e.preventDefault();
+                  // slide out a bit for feedback then navigate
+                  const section = document.querySelector('main');
+                  if (section) {
+                    section.classList.add('animate-slideUp');
+                    setTimeout(() => {
+                      window.location.assign('/blogpost');
+                    }, 280);
+                  } else {
+                    window.location.assign('/blogpost');
+                  }
+                }}
+                aria-label="Go to blogpost"
+                title="Go to blogpost"
+              >
+                Read the Blogpost
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://timeline.knightlab.com/" target="_blank" rel="noreferrer">What powers this?</a>
+                <Link href="/references">References</Link>
               </Button>
             </div>
-            <Separator />
-            <TimelineEmbed url="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=YOUR_PUBLISHED_SHEET_URL&font=Default&lang=en&initial_zoom=2&height=650" />
-          </CardContent>
-        </Card>
+          </div>
+          <div className="order-1 md:order-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/Jose_Rizal_full.jpg"
+              alt="Portrait of José Rizal"
+              className="w-full aspect-square rounded-lg border shadow-sm object-cover object-top"
+            />
+          </div>
+        </section>
+        </FadeIn>
       </main>
     </div>
   );

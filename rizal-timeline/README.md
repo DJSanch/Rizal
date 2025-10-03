@@ -34,3 +34,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploy on Vercel
+
+1) Push this repo to GitHub.
+2) In Vercel, "New Project" → Import the GitHub repo.
+3) Framework preset: Next.js. Build/Output: defaults are fine.
+4) Set environment (none required). Click Deploy.
+
+### Timeline setup
+- Make a copy of the TimelineJS Google Sheet template from timeline.knightlab.com.
+- Paste your events dataset.
+- Publish the sheet to the web and copy the published URL.
+- Edit `src/app/page.tsx` and replace `YOUR_PUBLISHED_SHEET_URL` in the `TimelineEmbed` URL.
+
+### Local dev
+```bash
+cd rizal-timeline
+npm run dev
+```
+
